@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <form action="" onsubmit="return false">
+                <button v-on:click = "addRosset">Add rosette</button>
+                <label for="numberHoles" v-on:mousemove= "changeColor">Enter the number of holes</label>
+                <input type="text" id="numberHoles"  pattern = "[0-9]{1}">
+                <p>Result:{{result}}</p>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+    <script>
+        new Vue({
+            el: "#app",
+            data:{
+                result:0,
+            },
+            methods:{
+                addRosset:function(){
+                    this.result += Number(document.querySelector('#numberHoles').value)-1; 
+                    document.querySelector('#numberHoles').value = '';
+                },
+                changeColor:function(event){
+                    event.target.style.color= "#ffffdd";
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

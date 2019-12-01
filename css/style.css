@@ -1,0 +1,35 @@
+.container {
+  margin: 0 auto;
+  width: 500px;
+  height: 500px;
+  background-color: #ff9100;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .container form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+    background-color: royalblue;
+    justify-content: center;
+    align-items: center; }
+    .container form button {
+      width: 110px;
+      height: 40px;
+      background-color: #fff;
+      border-radius: 10px;
+      text-transform: uppercase;
+      font-family: sans-serif;
+      font-weight: bold;
+      margin: 10px;
+      color: #ff9100; }
+    .container form label {
+      font-family: sans-serif;
+      text-transform: uppercase;
+      margin: 10px;
+      color: #fac47e; }
+    .container form input {
+      height: 30px;
+      width: 200px;
+      font-size: 25px; }
